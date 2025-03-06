@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Azure SQL Database connection string with ODBC Driver 18
-conn_str = "Driver={ODBC Driver 18 for SQL Server};Server=tcp:memershiptest.database.windows.net,1433;Database=Membership-Test;Uid=sachindu;Pwd=Kulasiri@2001;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+conn_str = "Driver={ODBC Driver 18 for SQL Server};Server=tcp:memershiptest.database.windows.net,1433;Database=Membership-Test;Uid=sachindu;Pwd={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 
 def get_db_connection():
     """Create and return a connection to the database"""
