@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join us - එක්වන්න</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        .header {
+            background-color: #0077aa;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        
+        .form-container {
+            background-color: #f0b800;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .radio-option input,
+        .checkbox-option input {
+            margin-right: 5px;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            margin: 25px 0 15px 0;
+        }
+        
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Join us - එක්වන්න
+    </div>
+    
+    <div class="form-container">
+        <form id="registrationForm">
+            <!-- First section -->
+            <div class="form-group">
+                <label class="required">පුද්ගල තත්වය</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="type1" name="mainType" value="මහතා">
+                        <label for="type1">මහතා</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="type1" name="mainType" value="මහත්මිය">
+                        <label for="type1">මහත්මිය</label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        <input type="radio" id="type3" name="mainType" value="මෙනෙවිය">
+                        <label for="type3">මෙනෙවිය</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="type2" name="mainType" value="ආචාර්ය">
+                        <label for="type2">ආචාර්ය</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="type4" name="mainType" value="මහාචාර්ය">
+                        <label for="type4">මහාචාර්ය</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="type5" name="mainType" value="පූජ්‍ය">
+                        <label for="type5">පූජ්‍ය</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="other" name="mainType" value="Other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="name" class="required">නම</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address" class="required">ලිපිනය</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="NIC" class="required">හැඳුනුම්පත් අංකය (ජාතික / විදේශ ගමන් බලපත්‍රය / රියදුරු බලපත්‍රය)</label>
+                <input type="text" id="NIC" name="NIC" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="profession" class="required">වෘත්තීය / රැකියාව/ ව්‍යාපාරය</label>
+                <input type="text" id="profession" name="profession" required>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label for="mobilePhone" class="required">දුරකථන අංකය (ජංගම)</label>
+                    <input type="text" id="mobilePhone" name="mobilePhone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label for="province" class="required">පළාත</label>
+                    <select id="province" name="province" required>
+                        <option value="">තෝරන්න</option>
+                        <option value="western">බස්නාහිර</option>
+                        <option value="central">මධ්‍යම</option>
+                        <option value="southern">දකුණු</option>
+                        <option value="northern">උතුරු</option>
+                        <option value="eastern">නැගෙනහිර</option>
+                        <option value="north-western">වයඹ</option>
+                        <option value="north-central">උතුරු මැද</option>
+                        <option value="uva">ඌව</option>
+                        <option value="sabaragamuwa">සබරගමුව</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="district" class="required">දිස්ත්‍රික්කය</label>
+                    <select id="district" name="district" required>
+                        <option value="">තෝරන්න</option>
+                        <!-- Districts will be populated via JavaScript -->
+                    </select>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="form-group">
+                    <label for="pRadio">ප්‍රා.ලේ.කො</label>
+                    <input type="text" id="pRadio" name="pRadio">
+                </div>
+                
+                <div class="form-group">
+                    <label for="gRadio">ග්‍රා.නි.කො</label>
+                    <input type="text" id="gRadio" name="gRadio">
+                </div>
+            </div>
+            
+            <!-- Second part of the form -->
+            <div class="form-group">
+                <label for="constituency">මැතිවරණ කොට්ඨාශය</label>
+                <input type="text" id="constituency" name="constituency">
+            </div>
+            
+            <div class="form-group">
+                <label for="primaryNumber">දුරකථන අංකය (නිවසේ)</label>
+                <input type="text" id="primaryNumber" name="primaryNumber">
+            </div>
+            <div class="form-group">
+                <label for="birthCountry">ඉපදුන රට</label>
+                <input type="text" id="birthCountry" name="birthCountry">
+            </div>
+            <div class="form-group">
+                <label for="livingCountry">දැනට ජීවත්වන රට</label>
+                <input type="text" id="livingCountry" name="livingCountry">
+            </div>
+    
+            
+            <div class="section-title">සමාජ මාධ්‍ය විස්තර</div>
+            
+            <div class="form-group">
+                <label for="facebook">මුහුණු පොතේ ලිපිනය (Facebook)</label>
+                <input type="text" id="facebook" name="facebook">
+            </div>
+            
+            <div class="form-group">
+                <label for="twitter">ට්විටර් ලිපිනය (Twitter)</label>
+                <input type="text" id="twitter" name="twitter">
+            </div>
+            
+            <div class="form-group">
+                <label for="whatsapp">වට්සැප් අංකය (Whatsapp)</label>
+                <input type="text" id="whatsapp" name="whatsapp">
+            </div>
+            
+            <!-- Interests section -->
+            <div class="form-group">
+                <label>ඔබට දේශප්‍රේමී ජාතික පෙරමුණට දායක විය හැක්කේ</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest1" name="interests[]" value="ක්‍රියාකාරී සාමාජික කටයුතු">
+                        <label for="interest1">ක්‍රියාකාරී සාමාජික කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest2" name="interests[]" value="සෘජු දේශපාලන කටයුතු">
+                        <label for="interest2">සෘජු දේශපාලන කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest3" name="interests[]" value="දේශීය වෙදකම">
+                        <label for="interest3">දේශීය වෙදකම</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest4" name="interests[]" value="ගෙවිතන">
+                        <label for="interest4">ගෙවිතන</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest5" name="interests[]" value="වාරි තාක්ෂණය">
+                        <label for="interest5">වාරි තාක්ෂණය</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest6" name="interests[]" value="දහම් පාසල් හා බෞද්ධ සංස්කෘතික කටයුතු">
+                        <label for="interest6">දහම් පාසල් හා බෞද්ධ සංස්කෘතික කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest7" name="interests[]" value="තරුණ කටයුතු">
+                        <label for="interest7">තරුණ කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest8" name="interests[]" value="අධ්‍යාපන කටයුතු">
+                        <label for="interest8">අධ්‍යාපන කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest9" name="interests[]" value="ව්‍යාපාර කටයුතු">
+                        <label for="interest9">ව්‍යාපාර කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest10" name="interests[]" value="විශ්ව විද්‍යාල සහ තෘතියික අධ්‍යාපන කටයුතු">
+                        <label for="interest10">විශ්ව විද්‍යාල සහ තෘතියික අධ්‍යාපන කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest11" name="interests[]" value="කලා කටයුතු">
+                        <label for="interest11">කලා කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest12" name="interests[]" value="ක්‍රීඩා කටයුතු">
+                        <label for="interest12">ක්‍රීඩා කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest13" name="interests[]" value="වෘත්තීය දායකත්වය">
+                        <label for="interest13">වෘත්තීය දායකත්වය</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest14" name="interests[]" value="විදේශ සබදතා කටයුතු">
+                        <label for="interest14">විදේශ සබදතා කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest15" name="interests[]" value="ඉතිහාසය හා පුරාවිද්‍යා කටයුතු">
+                        <label for="interest15">ඉතිහාසය හා පුරාවිද්‍යා කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest16" name="interests[]" value="ඡායාරූපකරණය සහ වීඩියෝකරණය">
+                        <label for="interest16">ඡායාරූපකරණය සහ වීඩියෝකරණය</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest17" name="interests[]" value="වැඩසටහන් ඉදිරිපත් කිරීම සහ නිවේදන">
+                        <label for="interest17">වැඩසටහන් ඉදිරිපත් කිරීම සහ නිවේදන</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest18" name="interests[]" value="ජනමාධ්‍ය කටයුතු">
+                        <label for="interest18">ජනමාධ්‍ය කටයුතු</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest19" name="interests[]" value="වෙනත්">
+                        <label for="interest19">වෙනත්</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        // District data based on provinces
+        const districtsByProvince = {
+            "western": ["කොළඹ", "ගම්පහ", "කළුතර"],
+            "central": ["මහනුවර", "මාතලේ", "නුවරඑළිය"],
+            "southern": ["ගාල්ල", "මාතර", "හම්බන්තොට"],
+            "northern": ["යාපනය", "කිලිනොච්චි", "මන්නාරම", "වවුනියාව", "මුලතිව්"],
+            "eastern": ["මඩකලපුව", "අම්පාර", "ත්‍රිකුණාමලය"],
+            "north-western": ["කුරුණෑගල", "පුත්තලම"],
+            "north-central": ["අනුරාධපුරය", "පොළොන්නරුව"],
+            "uva": ["බදුල්ල", "මොණරාගල"],
+            "sabaragamuwa": ["රත්නපුර", "කෑගල්ල"]
+        };
+        
+        // Populate districts based on selected province
+        document.getElementById('province').addEventListener('change', function() {
+            const provinceValue = this.value;
+            const districtSelect = document.getElementById('district');
+            
+            // Clear existing options
+            districtSelect.innerHTML = '<option value="">තෝරන්න</option>';
+            
+            // If a province is selected, populate its districts
+            if (provinceValue && districtsByProvince[provinceValue]) {
+                districtsByProvince[provinceValue].forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+            }
+        });
+        
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validate required fields
+    const requiredFields = document.querySelectorAll('[required]');
+    let isValid = true;
+    
+    requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+            isValid = false;
+            field.style.borderColor = 'red';
+        } else {
+            field.style.borderColor = '#ddd';
+        }
+    });
+    
+    if (isValid) {
+        // Collect form data
+        const formData = new FormData(this);
+        const formDataObj = {};
+        
+        for (const [key, value] of formData.entries()) {
+            formDataObj[key] = value;
+        }
+        
+        // Handle checkboxes separately (they can have multiple values)
+        formDataObj.interests = [];
+        document.querySelectorAll('input[name="interests[]"]:checked').forEach(checkbox => {
+            formDataObj.interests.push(checkbox.value);
+        });
+        
+        // Send the data to the Flask backend
+        fetch('http://localhost:5000/api/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formDataObj)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                alert('Form submitted successfully!');
+                // Optional: Reset the form
+                document.getElementById('registrationForm').reset();
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the form. Please try again.');
+        });
+    } else {
+        alert('Please fill in all required fields.');
+    }
+});
+    </script>
+</body>
+</html>

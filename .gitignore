@@ -1,0 +1,26 @@
+# Ignore virtual environment
+venv/
+.Venv/
+env/
+.Env/
+
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Editor and OS files
+*.swp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
